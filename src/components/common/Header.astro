@@ -1,0 +1,15 @@
+---
+const runtime = Astro.locals.runtime
+const env = runtime ? runtime.env.ENVIRONMENT : "staging"
+
+import Container from "../../layouts/Container.astro";
+---
+
+<section>
+	<Container>
+		<nav class="flex justify-between items-center py-2">
+			<img src="/logo.png" alt="Logo" />
+			<button class="text-white hover:text-black p-4 bg-green-700 rounded transition duration-300">Start a Project</button>
+		</nav>
+	</Container>	
+</section>

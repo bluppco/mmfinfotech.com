@@ -5,13 +5,24 @@ const runtime = Astro.locals.runtime;
 const endpoint = endpointFetch( runtime.env.ENVIRONMENT )
 
 // NETWORK CALL TO GET DATA
-const network_data = await fetch( endpoint + "/home" )
-const data_json = await network_data.json()
+// const network_data = await fetch( endpoint + "/home" )
+// const data_json = await network_data.json()
 
 // IMPORT ASTRO COMPONENTS
 import Layout from "../layouts/Layout.astro"
+import Header from "../components/common/Header.astro"
 import HeaderBanner from "../components/common/HeaderBanner.astro"
 ---
-<Layout>
+
+<Layout
+	title="Top Admin Support Company | Mobile App & Software Development"
+	description="MMF Infotech is a full service software development company specialized in designing, development, digital marketing and back office services."
+	image="/logo.png"
+>
+
+	{/* Benchmarking Banner */}
 	<HeaderBanner />
+
+	<Header />
+
 </Layout>
