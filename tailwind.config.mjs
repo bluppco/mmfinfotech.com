@@ -11,6 +11,8 @@ export default {
 			},
 			backgroundImage: {
 				"brandBg": 'url("/bg.jpg")',
+				"leftLeafBg": 'url("/left-leaf.png")',
+				"rightLeafBg": 'url("/right-leaf.png")',
 			}
 
 		},
