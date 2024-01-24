@@ -1,14 +1,25 @@
 ---
 import Container from "../../layouts/Container.astro";
-import H1White from "../common/atoms/H1White.astro";
-
-
+import H1Leading from "../common/atoms/H1Leading.astro";
 ---
 
-<section class="w-full">
+<section class="w-full bg-brandGreen py-8">
 	<Container>
-		<div>
-			<H1White text="Want Industry Leaders Working On Your IT Projects? Contact Us Now!" />
+		<div class="flex">
+			<div class="basis-1/2 flex justify-center items-center flex flex-col pr-16">
+				<H1Leading text="Want Industry Leaders Working On Your IT Projects?" />
+				<br />
+				<H1Leading text="Contact Us Now!" />
+			</div>
+			<div class="basis-1/2 w-full bg-white p-8">
+				<form class="flex flex-col gap-4">
+					<input type="text"  placeholder="Name"  class="border p-2"/>
+					<input type="text"  placeholder="Email ID" class="border p-2"/>
+					<textarea placeholder="Project Description"  class="border p-2"/>
+					<img src="/captcha.png" alt="Captcha" width="300px" />
+					<button class="uppercase text-white bg-brandGreen hover:bg-brandGreen/80 rounded font-extrabold p-4">submit</button>
+				</form>
+			</div>
 		</div>
 	</Container>
 </section>
