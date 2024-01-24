@@ -6,7 +6,7 @@ export default {
 			colors: {
 				clientsBackground: "#222222e6",
 				brandGreen: "#3fa205",
-				dimWhite: "#f7f7f7",
+				dimWhite: "#eeeeef",
 			}
 		},
 	},

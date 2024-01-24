@@ -1,0 +1,32 @@
+---
+import ContainerSmall from "../../layouts/ContainerSmall.astro";
+
+import H1 from "../common/atoms/H1.astro";
+import P from "../common/atoms/P.astro";
+import ServiceSingle from "./ServiceSingle.astro";
+---
+
+<section class="w-full bg-dimWhite py-24">
+	<ContainerSmall>
+		<div class="flex flex-col justify-center items-center">
+			<H1 text="SERVICE EXPERTISE" />
+			<div class="flex justify-between w-full my-8">
+
+				<div class="basis-1/2 flex flex-col justify-between items-start">
+					<div class="pr-16">
+						<h1 class="text-3xl font-extrabold">Drilled in Excellence</h1>
+						<P text="Ever since the technological world is advancing, the traditional way of operating is no more into existence. With modern channels, tools, processes, and technologies, we excel in contributing successes to our global clients. We hold expertise in delivering customized services as per the client's demand." />
+					</div>	
+					<div class="grid grid-cols-2 gap-8">
+						<ServiceSingle title="100+" subtitle="Certified Veterans"  />
+						<ServiceSingle title="24x7" subtitle="Availability"  />
+						<ServiceSingle title="10+" subtitle="Years Experience"  />
+						<ServiceSingle title="700+" subtitle="Contented Clients"  />
+					</div>
+				</div>
+
+				<img src="/service.png" alt="services" class="basis-1/2" />
+			</div>
+		</div>
+	</ContainerSmall>
+</section>
