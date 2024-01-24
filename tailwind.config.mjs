@@ -7,7 +7,11 @@ export default {
 				clientsBackground: "#222222e6",
 				brandGreen: "#3fa205",
 				dimWhite: "#eeeeef",
+			},
+			backgroundImage: {
+				"brandBg": 'url("/bg.jpg")',
 			}
+
 		},
 	},
 	plugins: [],
