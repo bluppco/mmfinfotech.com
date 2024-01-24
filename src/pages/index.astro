@@ -12,6 +12,10 @@ const endpoint = endpointFetch( runtime.env.ENVIRONMENT )
 import Layout from "../layouts/Layout.astro"
 import Header from "../components/common/Header.astro"
 import HeaderBanner from "../components/common/HeaderBanner.astro"
+import Hero from "../components/home/Hero.astro"
+import Clients from "../components/home/Clients.astro";
+import Corporate from "../components/home/Corporate.astro";
+import Experts from "../components/home/Experts.astro";
 ---
 
 <Layout
@@ -20,9 +24,20 @@ import HeaderBanner from "../components/common/HeaderBanner.astro"
 	image="/logo.png"
 >
 
-	{/* Benchmarking Banner */}
-	<HeaderBanner />
+	<section class="h-screen overflow-hidden">
+		{/* Benchmarking Banner */}
+		<HeaderBanner />
 
-	<Header />
+		<Header />
+
+		{/* Hero */}
+		<Hero />
+	</section>	
+
+	<Clients />
+
+	<Corporate />
+
+	<Experts />
 
 </Layout>
