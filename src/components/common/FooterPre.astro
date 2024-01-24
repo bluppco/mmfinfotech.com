@@ -1,0 +1,52 @@
+---
+import ContainerSmall from "../../layouts/ContainerSmall.astro";
+
+import { locations } from "../../constants/locations";
+import Location from "../home/Location.astro";
+
+import H2Link from "./atoms/H2Link.astro";
+import Link from "./Link.astro";
+---
+
+<section class="w-full bg-dimWhite p-24">
+	<ContainerSmall>
+		<div class="grid grid-cols-4 gap-8 gap-y-16">
+			<div>
+				<img src="logo.png" alt="Logo" />
+				<a href="mailto:info@mmfinfotech.com" class="block my-4 text-lg hover:underline">info@mmfinfotech.com</a>
+				<a href="tel:+91 90572 36453" class="block my-4 text-lg hover:underline">+91 90572 36453</a>
+				<button class="text-white hover:text-black p-4 bg-green-700 rounded transition duration-300">Start a Project</button>
+			</div>
+
+			<div class="flex flex-col gap-4">
+				<H2Link href="/services.php" text="service" />
+				<Link href="/services/back-office.php" title="Back Office Services" />
+				<Link href="/services/digital-marketing.php" title="Digital Marketing" />
+				<Link href="/services/digital-marketing/seo.php" title="SEO & Content Service" />
+				<Link href="/amazon-account-management-services.php" title="Amazon Services" />
+			</div>
+
+			<div class="flex flex-col gap-4">
+				<H2Link href="#" text="Development" />
+				<Link href="/services/web-design-and-development.php" title="Web Development" />
+				<Link href="/services/mobile-app-design-and-development.php" title="Mobile Development" />
+				<Link href="/services/emerging-technologies-services/machine-learning-and-ai-solutions.php" title="Machine Learning and AI Solutions" />
+			</div>
+
+			<div class="flex flex-col gap-4">
+				<H2Link href="#" text="Resources" />
+				<Link href="/careers.php" title="Careers" />
+				<Link href="/portfolio.php" title="Portfolio" />
+				<Link href="/contact.php" title="Contact" />
+				<Link href="/Blog" title="Blog" />
+				<Link href="/partnership-category.php" title="Our Partners" />
+			</div>
+
+			{
+				locations.map((m) => (
+					<Location location={m.location} address={m.address} number={m.number} />
+				))
+			}
+		</div>
+	</ContainerSmall>
+</section>
