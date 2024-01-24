@@ -10,8 +10,11 @@ const endpoint = endpointFetch( runtime.env.ENVIRONMENT )
 
 // IMPORT ASTRO COMPONENTS
 import Layout from "../layouts/Layout.astro"
+
 import Header from "../components/common/Header.astro"
+import Footer from "../components/common/Footer.astro"
 import HeaderBanner from "../components/common/HeaderBanner.astro"
+
 import Hero from "../components/home/Hero.astro"
 import Clients from "../components/home/Clients.astro";
 import Corporate from "../components/home/Corporate.astro";
@@ -49,4 +52,5 @@ import News from "../components/home/News.astro";
 
 	<News />
 
+	<Footer />
 </Layout>

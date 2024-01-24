@@ -5,10 +5,10 @@ import ContainerSmall from "../../layouts/ContainerSmall.astro"
 
 <section class="bg-clientsBackground w-full py-4">
 	<ContainerSmall>
-		<div class="grid grid-cols-1 lg:grid-cols-4 place-items-center">
+		<div class="grid grid-cols-1 lg:grid-cols-4 place-items-center gap-x-16">
 			{
 				clients.map((c) => (
-					<img src={`/${c}`} alt="client logo" class="block" height="125" width="125"/>
+					<img src={`/${c}`} alt="client logo" class="block" height="80px" width="180px"/>
 				))
 			}
 		</div>
