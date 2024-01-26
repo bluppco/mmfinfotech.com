@@ -24,6 +24,7 @@ import Process from "../components/home/Process.astro";
 import News from "../components/home/News.astro";
 import Contact from "../components/home/Contact.astro";
 import FooterPre from "../components/common/FooterPre.astro";
+import Customers from "../components/home/Customers.astro";
 ---
 
 <Layout
@@ -31,16 +32,16 @@ import FooterPre from "../components/common/FooterPre.astro";
 	description="MMF Infotech is a full service software development company specialized in designing, development, digital marketing and back office services."
 	image="/logo.png"
 >
+	<HeaderBanner />
+	<Header />
 
-	<section class="h-screen overflow-hidden">
+	<!-- <section class="h-screen overflow-hidden">
 		{/* Benchmarking Banner */}
-		<HeaderBanner />
 
-		<Header />
 
 		{/* Hero */}
-		<Hero />
-	</section>	
+	</section>	 -->
+	<Hero />
 
 	<Clients />
 
@@ -51,6 +52,8 @@ import FooterPre from "../components/common/FooterPre.astro";
 	<Service />
 
 	<Process />
+
+	<Customers />
 
 	<News />
 

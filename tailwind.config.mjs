@@ -8,6 +8,7 @@ export default {
 				brandGreen: "#3fa205",
 				dimWhite: "#eeeeef",
 				dimGray: "#6c757d",
+				lightGray: "#f7f7f7",
 			},
 			backgroundImage: {
 				"brandBg": 'url("/bg.jpg")',
