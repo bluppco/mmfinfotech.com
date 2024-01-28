@@ -3,9 +3,10 @@ import Container from "../../layouts/Container.astro";
 import H1Leading from "../common/atoms/H1Leading.astro";
 ---
 
-<section class="w-full bg-brandGreen py-8">
+<section class="relative w-full py-8">
+	<div class="absolute top-0 left-0 bottom-0 bg-brandGreen h-full w-[50%]"></div>
 	<Container>
-		<div class="flex">
+		<div class="z-10 flex">
 			<div class="basis-1/2 flex justify-center items-center flex flex-col pr-16">
 				<H1Leading text="Want Industry Leaders Working On Your IT Projects?" />
 				<br />
