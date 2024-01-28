@@ -1,0 +1,25 @@
+---
+const runtime = Astro.locals.runtime
+const env = runtime ? runtime.env.ENVIRONMENT : "staging"
+
+import Container from "../../layouts/Container.astro";
+---
+
+<section class={`z-20 fixed top-0 left-0 w-full bg-white ${env === "staging" && "mt-10" }`}>
+	<Container>
+		<nav class="flex justify-between items-center py-2">
+			<img src="/logo.png" alt="Logo" />
+			<div class="flex gap-8 items-center">
+				<span class="text-black font-bold cursor-pointer hover:text-brandGreen">Home</span>
+				<span class="text-black font-bold cursor-pointer hover:text-brandGreen">Why MMF</span>
+				<span class="text-black font-bold cursor-pointer hover:text-brandGreen">Service</span>
+				<span class="text-black font-bold cursor-pointer hover:text-brandGreen">Back office service</span>
+				<span class="text-black font-bold cursor-pointer hover:text-brandGreen">Amazon service</span>
+				<span class="text-black font-bold cursor-pointer hover:text-brandGreen">Development</span>
+				<span class="text-black font-bold cursor-pointer hover:text-brandGreen">On Demand Solutions</span>
+				<span class="text-black font-bold cursor-pointer hover:text-brandGreen">Blog</span>
+			</div>
+			<button class="text-white hover:text-black p-4 bg-green-700 rounded transition duration-300">Start a Project</button>
+		</nav>
+	</Container>	
+</section>

@@ -28,9 +28,19 @@ const {
         <meta property="twitter:image" content={ image } />
         <meta property="twitter:image" content={ image } />
         <meta property="article:publisher" content="" />
-        <link rel="icon" href="/favicon.svg">
+        <link rel="icon" href="/favicon.png">
     </head>
     <body>
         <slot />
     </body>
 </html>
+
+<style>
+    body::-webkit-scrollbar {
+        width: 0.4em;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background-color: rgb(48, 47, 47);
+    }
+</style>

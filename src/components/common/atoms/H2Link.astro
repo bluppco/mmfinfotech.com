@@ -1,0 +1,9 @@
+---
+const { text, href  } = Astro.props;
+---
+
+<a href={href} class="hover:underline decoration-brandGreen underline-offset-2">
+	<h1 class="capitalize font-extrabold text-brandGreen text-3xl">
+		{text}
+	</h1>
+</a>

@@ -1,0 +1,26 @@
+---
+import ContainerSmall from "../../layouts/ContainerSmall.astro";
+import H1White from "../common/atoms/H1White.astro";
+
+import PWhite from "../common/atoms/PWhite.astro";
+
+import { process } from "../../constants/process";
+import ProcessSingle from "./ProcessSingle.astro";
+import P from "../common/atoms/P.astro";
+---
+
+<section class="w-full p-24 bg-green-800 bg-brandBg bg-fixed bg-cover">
+	<ContainerSmall>
+		<H1White text="OUR TECH-SAVVY PROCESS" />
+		<div class="px-16">
+			<PWhite text="Time management is the most essential parameter for every business. MMF believes the same and follows an elastic IT solutions delivery process to deliver the projects on time" />
+		</div>
+		<div class="flex my-8">
+			{
+				process.map((p) => (
+					<ProcessSingle image={p.image} title={p.title} />
+				))
+			}
+		</div>
+	</ContainerSmall>
+</section>

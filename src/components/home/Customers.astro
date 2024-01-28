@@ -1,0 +1,26 @@
+---
+import ContainerSmall from "../../layouts/ContainerSmall.astro";
+
+import H1Green from "../common/atoms/H1Green.astro";
+---
+
+<section class="w-full py-24 bg-rightLeafBg bg-fixed bg-cover bg-right">
+	<ContainerSmall>
+		<div class="relative h-full flex flex-col justify-center items-center gap-24">
+			<div>
+				<p class="text-sm text-center text-slate-600">CLIENT FEEDBACK</p>
+				<H1Green text="WHAT'S OUR CLIENTS SAY" />
+			</div>
+
+			<div class="w-[70%] flex gap-8 items-start">
+				<img src="/c1.webp" alt="Icon" class="rounded-full" height="100px" width="100px"/>
+				<div class="mx-auto">
+					<p class="text-brandGreen text-lg">I am the Operations Manager of Prime Computer Services and have used to manage a client website for me. I have always found to be very proactive and prompt when presented with changes and requests on the site. He is somebody I would not hesitate to recommend to others he certainly knows his stuff.</p>
+					<p class="text-slate-600"><strong class="text-black">-Natalie Clark</strong>	Co-founder</p>
+				</div>
+			</div>
+
+			<div class="absolute"></div>
+		</div>
+	</ContainerSmall>
+</section>

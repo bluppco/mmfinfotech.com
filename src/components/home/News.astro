@@ -1,0 +1,19 @@
+---
+import ContainerSmall from "../../layouts/ContainerSmall.astro"
+import H1Green from "../common/atoms/H1Green.astro"
+
+import { news } from "../../constants/news"
+---
+
+<section class="w-full p-24 bg-lightGray">
+	<ContainerSmall>
+		<H1Green text="AS FEATURED ON" />
+		<div class="flex gap-8 py-8">
+			{
+				news.map((n) => (
+					<img src={n} alt="news" height="160px" width="160px" />
+				))
+			}
+		</div>
+	</ContainerSmall>
+</section>

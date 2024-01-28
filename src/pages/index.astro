@@ -5,13 +5,60 @@ const runtime = Astro.locals.runtime;
 const endpoint = endpointFetch( runtime.env.ENVIRONMENT )
 
 // NETWORK CALL TO GET DATA
-const network_data = await fetch( endpoint + "/home" )
-const data_json = await network_data.json()
+// const network_data = await fetch( endpoint + "/home" )
+// const data_json = await network_data.json()
 
 // IMPORT ASTRO COMPONENTS
 import Layout from "../layouts/Layout.astro"
+
+import Header from "../components/common/Header.astro"
+import Footer from "../components/common/Footer.astro"
 import HeaderBanner from "../components/common/HeaderBanner.astro"
+
+import Hero from "../components/home/Hero.astro"
+import Clients from "../components/home/Clients.astro";
+import Corporate from "../components/home/Corporate.astro";
+import Experts from "../components/home/Experts.astro";
+import Service from "../components/home/Service.astro";
+import Process from "../components/home/Process.astro";
+import News from "../components/home/News.astro";
+import Contact from "../components/home/Contact.astro";
+import FooterPre from "../components/common/FooterPre.astro";
+import Customers from "../components/home/Customers.astro";
 ---
-<Layout>
+
+<Layout
+	title="Top Admin Support Company | Mobile App & Software Development"
+	description="MMF Infotech is a full service software development company specialized in designing, development, digital marketing and back office services."
+	image="/logo.png"
+>
 	<HeaderBanner />
+	<Header />
+
+	<!-- <section class="h-screen overflow-hidden">
+		{/* Benchmarking Banner */}
+
+
+		{/* Hero */}
+	</section>	 -->
+	<Hero />
+
+	<Clients />
+
+	<Corporate />
+
+	<Experts />
+
+	<Service />
+
+	<Process />
+
+	<Customers />
+
+	<News />
+
+	<Contact />
+
+	<FooterPre />
+	<Footer />
 </Layout>
