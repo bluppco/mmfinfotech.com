@@ -1,7 +1,11 @@
 ---
+import { Icon } from "astro-icon/components"
+
 import ContainerSmall from "../../layouts/ContainerSmall.astro";
 
 import { locations } from "../../constants/locations";
+import { socialIcons }  from "../../constants/socialIcons";
+
 import Location from "../home/Location.astro";
 
 import H2Link from "./atoms/H2Link.astro";
@@ -47,6 +51,18 @@ import Link from "./Link.astro";
 					<Location location={m.location} address={m.address} number={m.number} />
 				))
 			}
+
+
 		</div>
+			<div class="flex items-center justify-center w-full gap-4 pt-16">
+			{
+					socialIcons.map((icon) => (
+						<div class="bg-white hover:text-white p-4 rounded-xl cursor-pointer" onmouseover={`this.style.backgroundColor='${icon.color}'`} onmouseout="this.style.backgroundColor='white'">
+							<Icon name={icon.icon} class="h-6 w-6" />
+						</div>
+					))
+				}
+			</div>
 	</ContainerSmall>
 </section>
+{/* bg-white rounded-xl p-4 hover:bg-${icon.} hover:text-white cursor-pointer */}
